@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "9d9bc5ee-c53d-4268-ab19-b8c3c6d98ce4",
+		"name": "Backend Tes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9802616"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"testing\",\r\n\t\"password\": \"asdqwe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"testing\",\r\n\t\"password\": \"asdqwe123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobsALL",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0ZXN0aW5nIiwiaWF0IjoxNjY1MjI1ODEyLCJleHAiOjE2NjUzMTIyMTJ9.vb_RTRqRYzaPTAp68jwYLTRLSLT1SxyFHtTx3T0vCFM",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-access-token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"desc\": \"\",\r\n\t\"loc\": \"\",\r\n\t\"page\": \"1\"\r\n\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/api/jobs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jobs Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJ0ZXN0aW5nIiwiaWF0IjoxNjY1MjI1ODEyLCJleHAiOjE2NjUzMTIyMTJ9.vb_RTRqRYzaPTAp68jwYLTRLSLT1SxyFHtTx3T0vCFM",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-access-token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"desc\": \"python\",\r\n\t\"loc\": \"\",\r\n\t\"page\": \"1\"\r\n\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/api/jobs/32bf67e5-4971-47ce-985c-44b6b3860cdb",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"jobs",
+						"32bf67e5-4971-47ce-985c-44b6b3860cdb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uri search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dev3.dansmultipro.co.id/api/recruitment/positions.json?description=python&location=berlin",
+					"protocol": "http",
+					"host": [
+						"dev3",
+						"dansmultipro",
+						"co",
+						"id"
+					],
+					"path": [
+						"api",
+						"recruitment",
+						"positions.json"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "python"
+						},
+						{
+							"key": "location",
+							"value": "berlin"
+						},
+						{
+							"key": "full_time",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uri page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dev3.dansmultipro.co.id/api/recruitment/positions.json?page=2",
+					"protocol": "http",
+					"host": [
+						"dev3",
+						"dansmultipro",
+						"co",
+						"id"
+					],
+					"path": [
+						"api",
+						"recruitment",
+						"positions.json"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uri by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dev3.dansmultipro.co.id/api/recruitment/positions/f4a7c47f-c8ac-49fa-b15b-4ab37bfd2307",
+					"protocol": "http",
+					"host": [
+						"dev3",
+						"dansmultipro",
+						"co",
+						"id"
+					],
+					"path": [
+						"api",
+						"recruitment",
+						"positions",
+						"f4a7c47f-c8ac-49fa-b15b-4ab37bfd2307"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
